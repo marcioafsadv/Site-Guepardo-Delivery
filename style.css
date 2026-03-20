@@ -565,16 +565,16 @@ body {
 }
 
 .footer-contact-wrapper {
-    display: flex;
-    align-items: flex-start;
-    gap: 30px;
-    flex-wrap: wrap;
+    display: grid;
+    grid-template-columns: auto auto;
+    align-items: center;
+    justify-content: flex-start;
+    gap: 45px;
     margin-top: 25px;
+    margin-bottom: 35px;
 }
 
 .footer-contact-details {
-    flex: 1;
-    min-width: 250px;
     display: flex;
     flex-direction: column;
     gap: 15px;
