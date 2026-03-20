@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quem Somos - Guepardo Delivery</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <style>
+        body {
+            background: #000;
+            color: #fff;
+            line-height: 1.6;
+            font-family: 'Outfit', sans-serif;
+        }
+        .about-hero {
+            padding: 120px 0 80px;
+            text-align: center;
+            background: radial-gradient(circle at center, rgba(255, 98, 0, 0.1), transparent 70%);
+        }
+        .about-hero h1 {
+            font-size: 3.5rem;
+            font-weight: 900;
+            margin-bottom: 20px;
+            letter-spacing: -0.04em;
+            background: linear-gradient(135deg, #fff 0%, var(--primary-orange) 100%);
+            -webkit-background-clip: text;
+            background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+        .about-hero p {
+            font-size: 1.25rem;
+            color: rgba(255, 255, 255, 0.6);
+            max-width: 700px;
+            margin: 0 auto;
+        }
+        .about-section {
+            padding: 80px 0;
+        }
+        .glass-story {
+            background: rgba(30, 15, 8, 0.5);
+            backdrop-filter: blur(20px);
+            border: 1px solid rgba(255, 255, 255, 0.05);
+            border-radius: 40px;
+            padding: 60px;
+            margin-bottom: 60px;
+        }
+        .section-title {
+            font-size: 2rem;
+            font-weight: 800;
+            margin-bottom: 30px;
+            color: var(--primary-orange);
+            display: flex;
+            align-items: center;
+            gap: 15px;
+        }
+        .story-text {
+            font-size: 1.15rem;
+            color: rgba(255, 255, 255, 0.8);
+            column-count: 2;
+            column-gap: 50px;
+        }
+        @media (max-width: 768px) {
+            .story-text { column-count: 1; }
+        }
+        .mvv-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 30px;
+            margin-bottom: 60px;
+        }
+        .mvv-card {
+            background: rgba(255, 255, 255, 0.03);
+            border: 1px solid rgba(255, 255, 255, 0.05);
+            border-radius: 24px;
+            padding: 40px;
+            transition: all 0.3s ease;
+        }
+        .mvv-card:hover {
+            background: rgba(255, 98, 0, 0.05);
+            border-color: rgba(255, 98, 0, 0.2);
+            transform: translateY(-5px);
+        }
+        .mvv-card h3 {
+            font-size: 1.5rem;
+            margin-bottom: 15px;
+            color: var(--primary-orange);
+        }
+        .values-section {
+            background: rgba(255, 98, 0, 0.02);
+            padding: 80px 40px;
+            border-radius: 40px;
+            border: 1px solid rgba(255, 98, 0, 0.05);
+        }
+        .values-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 25px;
+        }
+        .value-item {
+            padding: 25px;
+            background: rgba(0,0,0,0.3);
+            border-radius: 20px;
+            border-left: 4px solid var(--primary-orange);
+        }
+        .value-item h4 {
+            font-size: 1.1rem;
+            margin-bottom: 10px;
+            color: #fff;
+        }
+        .value-item p {
+            font-size: 0.95rem;
+            color: rgba(255,255,255,0.6);
+        }
+        .back-home {
+            position: fixed;
+            top: 40px;
+            left: 40px;
+            z-index: 100;
+            background: rgba(255, 255, 255, 0.05);
+            padding: 12px 20px;
+            border-radius: 100px;
+            color: #fff;
+            text-decoration: none;
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            font-weight: 600;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            transition: all 0.3s ease;
+        }
+        .back-home:hover {
+            background: var(--primary-orange);
+            color: #fff;
+            transform: scale(1.05);
+        }
+    </style>
+</head>
+<body>
+    <a href="index.html" class="back-home">
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="19" y1="12" x2="5" y2="12"></line><polyline points="12 19 5 12 12 5"></polyline></svg>
+        Voltar para o site
+    </a>
+
+    <header class="about-hero">
+        <div class="container">
+            <img src="assets/logo-icon.png" alt="Guepardo" style="height: 80px; margin-bottom: 40px;">
+            <h1>QUEM SOMOS</h1>
+            <p>Guepardo Delivery: Nossa História, Nosso DNA. Tecnologia e Agilidade em Movimento.</p>
+        </div>
+    </header>
+
+    <main class="container">
+        <section class="about-section">
+            <div class="glass-story">
+                <h2 class="section-title">O Elo Inteligente</h2>
+                <div class="story-text">
+                    <p>A Guepardo Delivery nasceu da inquietação de profissionais que viam na logística tradicional barreiras que limitavam o crescimento de negócios e frustravam consumidores. Percebemos que o mundo pedia mais do que apenas "entregas"; pedia conectividade, previsibilidade e velocidade, tudo em tempo real.</p>
+                    <p>Inspirados pela agilidade, precisão e velocidade do guepardo, o felino mais rápido da Terra, criamos uma plataforma tecnológica de última geração. Não somos apenas uma empresa de logística; somos o elo inteligente que conecta estabelecimentos comerciais, entregadores parceiros e clientes finais em um ecossistema fluido e eficiente.</p>
+                </div>
+            </div>
+
+            <div class="mvv-grid">
+                <div class="mvv-card">
+                    <h3>Nossa Missão</h3>
+                    <p>Capacitar operações de entrega em todo o mundo através de ferramentas disruptivas de última geração, garantindo que cada pedido chegue ao seu destino com a máxima eficiência, segurança e transparência. Queremos ser o motor que impulsiona o sucesso de nossos parceiros comerciais.</p>
+                </div>
+                <div class="mvv-card">
+                    <h3>Nossa Visão</h3>
+                    <p>Tornar-nos a referência global em soluções de logística inteligente e conectividade em tempo real, redefinindo os padrões de velocidade e confiabilidade na última milha ("last mile"). Vislumbramos um futuro onde a distância entre o desejo e a entrega seja minimizada.</p>
+                </div>
+            </div>
+
+            <div class="values-section">
+                <h2 class="section-title" style="justify-content: center; margin-bottom: 50px;">Nossos Valores</h2>
+                <div class="values-grid">
+                    <div class="value-item">
+                        <h4>Inovação Constante</h4>
+                        <p>Investimos incansavelmente em P&D para desenvolver as ferramentas mais avançadas de rastreamento e otimização.</p>
+                    </div>
+                    <div class="value-item">
+                        <h4>Agilidade e Precisão</h4>
+                        <p>Como o guepardo, agimos com rapidez e assertividade, otimizando cada segundo do processo logístico.</p>
+                    </div>
+                    <div class="value-item">
+                        <h4>Transparência Total</h4>
+                        <p>Acreditamos na clareza. Oferecemos visibilidade completa do status da entrega para todas as partes.</p>
+                    </div>
+                    <div class="value-item">
+                        <h4>Segurança e Confiabilidade</h4>
+                        <p>A integridade dos dados e das mercadorias é fundamental. Padrões cibernéticos e operacionais de elite.</p>
+                    </div>
+                    <div class="value-item">
+                        <h4>Parceria e Valorização</h4>
+                        <p>Valorizamos cada entregador parceiro e estabelecimento, construindo relacionamentos baseados na ética.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="about-section" style="text-align: center;">
+            <h2 class="section-title" style="justify-content: center;">Por Que Guepardo Delivery?</h2>
+            <div class="mvv-grid" style="margin-top: 40px;">
+                <div class="value-item" style="border-left-color: #2ECC71;">
+                    <h4>Rastreamento em Tempo Real</h4>
+                    <p>Visibilidade total do pedido, do estabelecimento à porta do cliente.</p>
+                </div>
+                <div class="value-item" style="border-left-color: #3498DB;">
+                    <h4>Rotas Inteligentes</h4>
+                    <p>Algoritmos avançados que minimizam tempo e custos de entrega.</p>
+                </div>
+            </div>
+            <p style="margin-top: 40px; font-weight: 700; color: var(--primary-orange); font-size: 1.2rem;">Guepardo Delivery: A velocidade que o seu negócio precisa, a inteligência que o mundo exige.</p>
+        </section>
+    </main>
+
+    <footer style="padding: 60px 0; border-top: 1px solid rgba(255,255,255,0.05); text-align: center; color: rgba(255,255,255,0.4);">
+        <p>&copy; 2026 Guepardo Delivery. Todos os direitos reservados.</p>
+    </footer>
+</body>
+</html>
