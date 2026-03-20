@@ -1677,7 +1677,73 @@ body {
     font-size: 0.95rem;
 }
 
-@media (max-width: 600px) {
+/* --- Responsive Adjustments & Mobile Menu --- */
+.menu-toggle {
+    display: none;
+    background: none;
+    border: none;
+    color: #fff;
+    cursor: pointer;
+    padding: 5px;
+    transition: 0.3s;
+    z-index: 2000;
+}
+
+.menu-toggle svg { width: 32px; height: 32px; }
+.menu-toggle.active { transform: rotate(90px); color: var(--primary-orange); }
+
+@media (max-width: 991px) {
+    .nav-links {
+        position: fixed;
+        top: 0;
+        right: -100%;
+        width: 100%;
+        height: 100vh;
+        background: rgba(13, 14, 18, 0.98);
+        backdrop-filter: blur(20px);
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        gap: 30px;
+        transition: 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+        z-index: 1000;
+    }
+
+    .nav-links.active { right: 0; }
+    .menu-toggle { display: block; }
+    .nav-item { font-size: 1.4rem; font-weight: 600; }
+    
+    .hero-title { font-size: 3.5rem; }
+    .hero-container { padding: 120px 20px; }
+    
+    .p-card-group { flex-direction: column; gap: 60px; }
+    .p-card { width: 100% !important; max-width: 450px; margin: 0 auto; }
+}
+
+@media (max-width: 768px) {
+    .hero-title { font-size: 2.8rem; }
+    .hero-subtitle { font-size: 1rem; max-width: 100%; }
+    .hero-actions { flex-direction: column; width: 100%; }
+    .hero-actions .btn { width: 100%; }
+    
+    .section-header h2 { font-size: 2.5rem; }
+    .testimonials-header h2 { font-size: 2.5rem; }
+    .testimonials-grid { grid-template-columns: 1fr; }
+    
+    .navbar .cta-btn { display: none; }
+    
+    .footer-grid { grid-template-columns: 1fr; text-align: center; gap: 40px; }
+    .footer-brand { align-items: center; }
+    .social-links { justify-content: center; }
+}
+
+@media (max-width: 480px) {
+    .hero-title { font-size: 2.2rem; }
+    .p-card { padding: 30px 20px; }
+    .p-card-features li { font-size: 0.9rem; }
+    
+    /* WhatsApp Mobile Tweak */
     .wa-widget { bottom: 20px; right: 20px; }
     .wa-chat-box { width: 280px; }
     .wa-trigger span { display: none; }
