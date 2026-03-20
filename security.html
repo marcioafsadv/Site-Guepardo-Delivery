@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Política de Segurança - Guepardo Delivery</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <style>
+        body {
+            background: #000;
+            color: #fff;
+            line-height: 1.6;
+            font-family: 'Outfit', sans-serif;
+        }
+        .security-container {
+            max-width: 800px;
+            margin: 100px auto;
+            padding: 50px;
+            background: rgba(30, 15, 8, 0.4);
+            backdrop-filter: blur(20px);
+            border: 1px solid rgba(255, 98, 0, 0.1);
+            border-radius: 32px;
+            box-shadow: 0 40px 100px rgba(0,0,0,0.8);
+        }
+        .security-header {
+            text-align: center;
+            margin-bottom: 50px;
+        }
+        .security-header h1 {
+            font-size: 2.5rem;
+            font-weight: 800;
+            margin-bottom: 15px;
+            background: linear-gradient(90deg, #fff, var(--primary-orange));
+            -webkit-background-clip: text;
+            background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+        .last-update {
+            color: var(--primary-orange);
+            font-weight: 600;
+            font-size: 0.9rem;
+            text-transform: uppercase;
+            letter-spacing: 0.1em;
+        }
+        .security-content h2 {
+            font-size: 1.5rem;
+            margin-top: 40px;
+            margin-bottom: 20px;
+            color: var(--primary-orange);
+            display: flex;
+            align-items: center;
+            gap: 15px;
+        }
+        .security-content p, .security-content li {
+            color: rgba(255, 255, 255, 0.7);
+            margin-bottom: 15px;
+        }
+        .security-content ul {
+            list-style: none;
+            padding-left: 0;
+            margin-bottom: 30px;
+        }
+        .security-content li {
+            position: relative;
+            padding-left: 25px;
+            margin-bottom: 10px;
+        }
+        .security-content li::before {
+            content: '🛡️';
+            position: absolute;
+            left: 0;
+            color: var(--primary-orange);
+            font-size: 0.9rem;
+        }
+        .back-home {
+            display: inline-flex;
+            align-items: center;
+            gap: 10px;
+            color: #fff;
+            text-decoration: none;
+            margin-bottom: 30px;
+            font-weight: 600;
+            transition: all 0.3s ease;
+            opacity: 0.6;
+        }
+        .back-home:hover {
+            opacity: 1;
+            color: var(--primary-orange);
+            transform: translateX(-5px);
+        }
+        footer {
+            margin-top: 50px;
+            text-align: center;
+            padding: 30px;
+            border-top: 1px solid rgba(255, 255, 255, 0.05);
+            color: rgba(255, 255, 255, 0.4);
+            font-size: 0.85rem;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="security-container">
+            <a href="index.html" class="back-home">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="19" y1="12" x2="5" y2="12"></line><polyline points="12 19 5 12 12 5"></polyline></svg>
+                Voltar para o Início
+            </a>
+
+            <header class="security-header">
+                <div class="logo" style="margin-bottom: 30px;">
+                    <img src="assets/logo-icon.png" alt="Guepardo" style="height: 60px;">
+                </div>
+                <h1>Política de Segurança</h1>
+                <span class="last-update">Última atualização: 20 de março de 2026</span>
+            </header>
+
+            <div class="security-content">
+                <p>Na <strong>Guepardo Delivery</strong>, a segurança da nossa tecnologia de conectividade e a integridade dos dados de nossos parceiros e clientes são prioridades inegociáveis. Esta política detalha as camadas de proteção que implementamos para garantir uma operação robusta.</p>
+
+                <h2>1. Criptografia e Tráfego de Dados</h2>
+                <ul>
+                    <li><strong>Protocolos SSL/TLS:</strong> Todo o tráfego de dados entre o usuário e nossos servidores é criptografado, garantindo que informações sensíveis não sejam interceptadas por terceiros.</li>
+                    <li><strong>Segurança de Pagamento:</strong> Não armazenamos dados completos de cartões de crédito em nossos servidores. Todas as transações são processadas por parceiros que cumprem o padrão internacional PCI-DSS.</li>
+                </ul>
+
+                <h2>2. Segurança de Acesso</h2>
+                <ul>
+                    <li><strong>Autenticação:</strong> Utilizamos métodos rigorosos de autenticação para acesso às contas de clientes e entregadores.</li>
+                    <li><strong>Monitoramento de Sessão:</strong> Implementamos mecanismos de detecção de acessos suspeitos ou realizados em locais geográficos incompatíveis com o perfil do usuário.</li>
+                </ul>
+
+                <h2>3. Proteção de Infraestrutura</h2>
+                <ul>
+                    <li><strong>Hospedagem em Nuvem:</strong> Nossos sistemas operam em servidores de última geração com redundância, garantindo alta disponibilidade e proteção contra ataques de negação de serviço (DDoS).</li>
+                    <li><strong>Firewalls:</strong> Mantemos camadas de firewall atualizadas para filtrar tráfego malicioso e prevenir invasões.</li>
+                </ul>
+
+                <h2>4. Responsabilidade do Usuário</h2>
+                <p>Para manter o ecossistema seguro, orientamos que:</p>
+                <ul>
+                    <li>A senha de acesso seja pessoal, intransferível e composta por caracteres alfanuméricos.</li>
+                    <li>O usuário nunca compartilhe códigos de verificação recebidos via SMS ou WhatsApp com terceiros.</li>
+                </ul>
+
+                <h2>5. Notificação de Incidentes</h2>
+                <p>Em conformidade com a LGPD, a Guepardo Delivery possui planos de resposta a incidentes. Caso qualquer vulnerabilidade seja detectada, as autoridades competentes e os titulares dos dados serão comunicados tempestivamente.</p>
+            </div>
+
+            <footer>
+                &copy; 2026 Guepardo Delivery. Todos os direitos reservados.
+            </footer>
+        </div>
+    </div>
+</body>
+</html>
