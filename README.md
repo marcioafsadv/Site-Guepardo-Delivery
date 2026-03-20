@@ -1,6 +1,8 @@
 # 🐆 Guepardo Delivery - Ecossistema de Logística de Elite
 
-Landing page moderna e de alta conversão para o ecossistema **Guepardo Delivery**. Desenvolvida com foco em performance, estética premium e experiência do usuário (UX) intuitiva.
+Landing page moderna e de alta conversão para o ecossistema **Guepardo Delivery**. Acesse em: [guepardodelivery.com](https://guepardodelivery.com/)
+
+Desenvolvida com foco em performance, estética premium e experiência do usuário (UX) intuitiva.
 
 ## 🚀 Tecnologias Utilizadas
 - **HTML5 & Vanilla CSS3**: Arquitetura limpa para máxima velocidade.
