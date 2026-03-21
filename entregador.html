@@ -1,0 +1,400 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Guepardo Delivery</title>
+    <link rel="icon" type="image/png" href="assets/logo-icon.png">
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <style>
+        body {
+            background: #1e0f08; /* Sophisticated dark brown */
+            color: #fff;
+            line-height: 1.6;
+            font-family: 'Outfit', sans-serif;
+            overflow-x: hidden;
+        }
+        .courier-hero {
+            padding: 140px 0 100px;
+            background: radial-gradient(circle at 100% 30%, rgba(255, 98, 0, 0.15), transparent 70%);
+        }
+        .hero-container {
+            display: flex;
+            align-items: center;
+            gap: 60px;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 40px;
+        }
+        .hero-text {
+            flex: 1;
+        }
+        .hero-image {
+            flex: 1;
+            position: relative;
+        }
+        .hero-image img {
+            width: 100%;
+            border-radius: 40px;
+            box-shadow: 0 30px 60px rgba(0,0,0,0.5);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+        }
+        .hero-text h1 {
+            font-size: 3.5rem;
+            font-weight: 900;
+            margin-bottom: 25px;
+            line-height: 1.1;
+            letter-spacing: -0.04em;
+        }
+        .hero-text .text-gradient {
+            background: linear-gradient(135deg, #fff 0%, var(--primary-orange) 100%);
+            -webkit-background-clip: text;
+            background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+        .hero-text p {
+            font-size: 1.25rem;
+            color: rgba(255, 255, 255, 0.7);
+            margin-bottom: 40px;
+        }
+
+        .section-title {
+            text-align: center;
+            font-size: 2.5rem;
+            font-weight: 800;
+            margin-bottom: 60px;
+            color: var(--primary-orange);
+        }
+
+        .benefits-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 30px;
+            max-width: 1000px;
+            margin: 0 auto 100px;
+            padding: 0 40px;
+        }
+        .benefit-card {
+            background: rgba(255, 255, 255, 0.03);
+            border: 1px solid rgba(255, 255, 255, 0.05);
+            border-radius: 24px;
+            padding: 40px;
+            transition: all 0.3s ease;
+            display: flex;
+            align-items: flex-start;
+            gap: 20px;
+        }
+        .benefit-card:hover {
+            background: rgba(255, 98, 0, 0.05);
+            border-color: rgba(255, 98, 0, 0.2);
+            transform: translateY(-5px);
+        }
+        .benefit-icon {
+            font-size: 2.5rem;
+            background: rgba(255, 98, 0, 0.1);
+            padding: 15px;
+            border-radius: 20px;
+            line-height: 1;
+        }
+        .benefit-content h3 {
+            font-size: 1.5rem;
+            margin-bottom: 10px;
+            color: #fff;
+        }
+        .benefit-content p {
+            color: rgba(255, 255, 255, 0.6);
+            font-size: 1rem;
+        }
+
+        .bag-section {
+            background: rgba(255, 98, 0, 0.03);
+            padding: 100px 0;
+            margin: 100px 0;
+            border-top: 1px solid rgba(255, 98, 0, 0.05);
+            border-bottom: 1px solid rgba(255, 98, 0, 0.05);
+        }
+        .bag-container {
+            display: flex;
+            align-items: center;
+            gap: 80px;
+            max-width: 1100px;
+            margin: 0 auto;
+            padding: 0 40px;
+        }
+        .bag-image {
+            flex: 1;
+        }
+        .bag-image img {
+            width: 100%;
+            border-radius: 30px;
+            box-shadow: 0 20px 40px rgba(0,0,0,0.4);
+        }
+        .bag-text {
+            flex: 1.2;
+        }
+        .bag-text h2 {
+            font-size: 2.2rem;
+            font-weight: 800;
+            margin-bottom: 20px;
+        }
+
+        .requirements-section {
+            padding: 80px 0;
+            max-width: 900px;
+            margin: 0 auto;
+            padding: 0 40px;
+        }
+        .requirements-list {
+            background: rgba(255, 255, 255, 0.02);
+            border-radius: 32px;
+            padding: 50px;
+            border: 1px solid rgba(255, 255, 255, 0.05);
+        }
+        .requirement-item {
+            display: flex;
+            align-items: center;
+            gap: 15px;
+            font-size: 1.2rem;
+            margin-bottom: 20px;
+            color: rgba(255, 255, 255, 0.8);
+        }
+        .requirement-item span {
+            color: var(--primary-orange);
+            font-weight: 800;
+        }
+
+        .how-to-join {
+            padding: 100px 0;
+            text-align: center;
+        }
+        .steps-grid {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 30px;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 40px;
+        }
+        .step-card {
+            position: relative;
+            padding: 30px;
+        }
+        .step-num {
+            font-size: 4rem;
+            font-weight: 900;
+            color: rgba(255, 98, 0, 0.1);
+            position: absolute;
+            top: 0;
+            left: 50%;
+            transform: translateX(-50%);
+            z-index: 0;
+        }
+        .step-content {
+            position: relative;
+            z-index: 1;
+        }
+        .step-content h4 {
+            font-size: 1.25rem;
+            margin-bottom: 10px;
+            color: var(--primary-orange);
+        }
+
+        .cta-buttons {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            flex-wrap: wrap;
+            margin-top: 60px;
+            padding-bottom: 100px;
+        }
+        .btn-large {
+            padding: 18px 40px;
+            border-radius: 100px;
+            font-size: 1.1rem;
+            font-weight: 700;
+            text-decoration: none;
+            transition: all 0.3s ease;
+            display: flex;
+            align-items: center;
+            gap: 12px;
+        }
+        .btn-primary-orange {
+            background: var(--primary-orange);
+            color: #fff;
+            box-shadow: 0 15px 35px rgba(255, 98, 0, 0.3);
+        }
+        .btn-black {
+            background: #000;
+            color: #fff;
+            border: 1px solid rgba(255,255,255,0.1);
+        }
+        .btn-large:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 20px 40px rgba(0,0,0,0.4);
+        }
+
+        .back-home {
+            position: fixed;
+            top: 40px;
+            left: 40px;
+            z-index: 1000;
+            background: rgba(255, 255, 255, 0.05);
+            padding: 12px 20px;
+            border-radius: 100px;
+            color: #fff;
+            text-decoration: none;
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            font-weight: 600;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            transition: all 0.3s ease;
+        }
+        .back-home:hover {
+            background: var(--primary-orange);
+            color: #fff;
+            transform: scale(1.05);
+        }
+
+        @media (max-width: 992px) {
+            .hero-container, .bag-container { flex-direction: column; text-align: center; }
+            .hero-text h1 { font-size: 2.5rem; }
+            .benefits-grid { grid-template-columns: 1fr; }
+            .steps-grid { grid-template-columns: repeat(2, 1fr); }
+        }
+    </style>
+</head>
+<body>
+    <a href="index.html" class="back-home">
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="19" y1="12" x2="5" y2="12"></line><polyline points="12 19 5 12 12 5"></polyline></svg>
+        Voltar para o site
+    </a>
+
+    <header class="courier-hero">
+        <div class="hero-container">
+            <div class="hero-text">
+                <h1 id="hero-title">CADASTRO ENTREGADOR: <br><span class="text-gradient">O FREELA QUE VOCÊ MERECE!</span></h1>
+                <p>Venha para o Guepardo Delivery e Mude sua Realidade! Nosso compromisso é com a sua eficiência, seu ganho real e sua liberdade.</p>
+                <div class="hero-btns">
+                    <a href="#cadastro" class="btn-large btn-primary-orange">SEJA UM GUEPARDO - CADASTRE-SE!</a>
+                </div>
+            </div>
+            <div class="hero-image">
+                <img src="assets/image_20.png" alt="Entregador chegando no estabelecimento">
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <section class="benefits-section">
+            <h2 class="section-title">Por que ser um Guepardo?</h2>
+            <div class="benefits-grid">
+                <div class="benefit-card">
+                    <div class="benefit-icon">💰</div>
+                    <div class="benefit-content">
+                        <h3>Taxas Justas e Transparentes</h3>
+                        <p>Aqui você sabe exatamente quanto vai ganhar por cada entrega, sem surpresas no fim do dia. Valorizamos o seu tempo e quilometragem.</p>
+                    </div>
+                </div>
+                <div class="benefit-card">
+                    <div class="benefit-icon">🛣️</div>
+                    <div class="benefit-content">
+                        <h3>Rotas Otimizadas</h3>
+                        <p>Nossa tecnologia Savana traça o melhor caminho, ponto a ponto, para que você faça mais entregas em menos tempo e economize combustível.</p>
+                    </div>
+                </div>
+                <div class="benefit-card">
+                    <div class="benefit-icon">⚡</div>
+                    <div class="benefit-content">
+                        <h3>Recebimento Rápido</h3>
+                        <p>Esqueça as esperas intermináveis. Receba os seus ganhos direto na sua conta, com um simples clique, de forma ágil e segura.</p>
+                    </div>
+                </div>
+                <div class="benefit-card">
+                    <div class="benefit-icon">📄</div>
+                    <div class="benefit-content">
+                        <h3>Burocracia Zero</h3>
+                        <p>Cadastro rápido e sem papelada excessiva. Comece a faturar o quanto antes, focando no que realmente importa: a entrega.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="bag-section">
+            <div class="bag-container">
+                <div class="bag-image">
+                    <img src="assets/image_23.png" alt="Entregador com a Bag do Guepardo">
+                </div>
+                <div class="bag-text">
+                    <h2>Sua Nova Rotina, Seus Novos Ganhos</h2>
+                    <p>Nossa plataforma de conectividade em tempo real une tecnologia e respeito para te oferecer a melhor experiência do mercado. Tenha a liberdade de escolher seus horários e a segurança de contar com uma plataforma que te apoia.</p>
+                </div>
+            </div>
+        </section>
+
+        <section class="requirements-section">
+            <h2 class="section-title">O Que Você Precisa:</h2>
+            <div class="requirements-list">
+                <div class="requirement-item"><span>✓</span> Ser maior de 18 anos.</div>
+                <div class="requirement-item"><span>✓</span> Possuir veículo próprio e CNH (conforme a categoria).</div>
+                <div class="requirement-item"><span>✓</span> Ter um smartphone com acesso à internet.</div>
+                <div class="requirement-item"><span>✓</span> Documentação regularizada (CNH, CRLV).</div>
+            </div>
+        </section>
+
+        <section class="how-to-join" id="cadastro">
+            <h2 class="section-title">Como Fazer Parte:</h2>
+            <div class="steps-grid">
+                <div class="step-card">
+                    <div class="step-num">01</div>
+                    <div class="step-content">
+                        <h4>Acesse o Cadastro</h4>
+                        <p>Clique no botão e vá para nossa Savana de Talentos.</p>
+                    </div>
+                </div>
+                <div class="step-card">
+                    <div class="step-num">02</div>
+                    <div class="step-content">
+                        <h4>Preencha os Dados</h4>
+                        <p>Insira seus dados básicos e envie a documentação.</p>
+                    </div>
+                </div>
+                <div class="step-card">
+                    <div class="step-num">03</div>
+                    <div class="step-content">
+                        <h4>Aguarde Ativação</h4>
+                        <p>Nossa equipe analisará seu perfil rapidamente.</p>
+                    </div>
+                </div>
+                <div class="step-card">
+                    <div class="step-num">04</div>
+                    <div class="step-content">
+                        <h4>Baixe o App</h4>
+                        <p>Acesse o App do Entregador e comece a rodar!</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="cta-buttons">
+                <a href="#" class="btn-large btn-primary-orange">SEJA UM GUEPARDO - CADASTRE-SE!</a>
+                <a href="#" class="btn-large btn-black">
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M17.523 15.3414C17.027 15.3414 16.625 15.7434 16.625 16.2394V17.3304C16.625 17.5234 16.548 17.7084 16.412 17.8444L14.5 19.7564L12.588 17.8444C12.452 17.7084 12.375 17.5234 12.375 17.3304V16.2394C12.375 15.7434 11.973 15.3414 11.477 15.3414C10.981 15.3414 10.579 15.7434 10.579 16.2394V17.3304C10.579 17.9944 10.843 18.6314 11.312 19.1004L13.862 21.6504C14.214 22.0024 14.787 22.0024 15.139 21.6504L17.689 19.1004C18.158 18.6314 18.421 17.9944 18.421 17.3304V16.2394C18.421 15.7434 18.019 15.3414 17.523 15.3414Z"/><path d="M14.5 0C8.149 0 3 5.149 3 11.5C3 17.851 8.149 23 14.5 23C20.851 23 26 17.851 26 11.5C26 5.149 20.851 0 14.5 0ZM14.5 21C9.252 21 5 16.748 5 11.5C5 6.252 9.252 2 14.5 2C19.748 2 24 6.252 24 11.5C24 16.748 19.748 21 14.5 21Z"/></svg>
+                    APP ANDROID
+                </a>
+                <a href="#" class="btn-large btn-black">
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M17.05 20.28c-.98.95-2.05.88-3.08.4-1.09-.5-2.08-.48-3.24 0-1.44.62-2.2.44-3.06-.4C4.15 16.3 4.14 10.6 7.4 8.7c1.32-.77 2.6-.45 3.33 0 .7.4 1.44.4 2.14 0 .73-.42 2.1-.85 3.56 0 1.25.7 1.95 1.5 2.45 2.1-2.45 2.85-2.08 7.37.45 9.1-.55 1.4-1.35 2.8-2.28 4.15-.46.7-.9 1.4-1.38 1.4-.5 0-.9-.65-2.14-.65-1.25 0-1.74.65-2.24.65-.5 0-1.12-.66-1.58-1.32-.46-.66-.86-1.44-1.22-2.22zM12.03 7.25c-.13-2.23 1.51-4.07 3.65-4.25.13 2.1-1.5 4.1-3.65 4.25z"/></svg>
+                    APP iOS
+                </a>
+            </div>
+        </section>
+    </main>
+
+    <footer style="padding: 60px 0; border-top: 1px solid rgba(255,255,255,0.05); text-align: center; color: rgba(255,255,255,0.4);">
+        <p>&copy; 2026 Guepardo Delivery. Todos os direitos reservados. 🐆</p>
+    </footer>
+</body>
+</html>
