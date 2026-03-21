@@ -13,7 +13,7 @@ Desenvolvida com foco em performance, estética premium e experiência do usuár
 ## 🛠️ Componentes do Ecossistema
 - **Guepardo Central**: Painel administrativo para controle total da operação.
 - **Savana do Guepardo**: App especializado para estabelecimentos e parceiros.
-- **Guepardo Entregador**: App otimizado para a rotina do entregador.
+- **Guepardo Entregador**: App otimizado para a rotina do entregador. [Ver Página](entregador.html)
 
 ## 📦 Como rodar o projeto
 1. Clone o repositório.
