@@ -1306,6 +1306,20 @@ body {
     gap: 25px;
 }
 
+@media (max-width: 991px) {
+    .segments-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 20px;
+    }
+}
+
+@media (max-width: 580px) {
+    .segments-grid {
+        grid-template-columns: 1fr;
+        gap: 15px;
+    }
+}
+
 .segment-card {
     background: rgba(30, 15, 8, 0.6);
     border: 1px solid rgba(255, 98, 0, 0.08);
@@ -1688,19 +1702,19 @@ body {
     gap: 2px;
 }
 
-.wa-msg-top {
-    color: #888;
-    font-size: 0.8rem;
-    font-weight: 400;
-    line-height: 1.2;
-}
-
-.wa-msg-bot {
-    color: #000;
-    font-size: 1.1rem;
-    font-weight: 700;
-    line-height: 1.2;
-}
+.wa-widget { position: fixed; bottom: 30px; right: 30px; z-index: 9999; }
+.wa-chat-box { position: absolute; bottom: 80px; right: 0; width: 320px; background: #fff; border-radius: 12px; box-shadow: 0 15px 50px rgba(0,0,0,0.3); overflow: hidden; transform: translateY(20px); opacity: 0; visibility: hidden; transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275); }
+.wa-widget.active .wa-chat-box { transform: translateY(0); opacity: 1; visibility: visible; }
+.wa-header { background: #25d366; padding: 15px 20px; color: #fff; position: relative; }
+.wa-header p { font-size: 0.9rem; line-height: 1.4; margin: 0; font-weight: 500; color: #fff; }
+.wa-close { position: absolute; top: 5px; right: 12px; font-size: 1.5rem; cursor: pointer; opacity: 0.7; transition: 0.2s; color: #fff; }
+.wa-close:hover { opacity: 1; }
+.wa-body { padding: 20px; display: flex; flex-direction: column; gap: 20px; }
+.wa-info { display: flex; align-items: center; gap: 15px; }
+.wa-brand-icon { width: 48px; height: 48px; flex-shrink: 0; }
+.wa-text-group { display: flex; flex-direction: column; gap: 2px; }
+.wa-msg-top { color: #888; font-size: 0.8rem; font-weight: 400; line-height: 1.2; filter: none; }
+.wa-msg-bot { color: #000; font-size: 1.1rem; font-weight: 700; line-height: 1.2; filter: none; }
 
 .wa-main-btn {
     background: #25d366;
@@ -1799,6 +1813,10 @@ body {
     .hero-title { font-size: 3.5rem; }
     .hero-container { padding: 120px 20px; }
     
+    .nav-container { padding: 12px 20px; }
+    .logo-icon { height: 64px; }
+    .logo-text { font-size: 1.1rem; }
+
     .p-card-group { flex-direction: column; gap: 60px; }
     .p-card { width: 100% !important; max-width: 450px; margin: 0 auto; }
 }
@@ -1825,9 +1843,12 @@ body {
     .p-card { padding: 30px 20px; }
     .p-card-features li { font-size: 0.9rem; }
     
+    .nav-container { padding: 10px 16px; }
+    .logo-icon { height: 50px; }
+
     /* WhatsApp Mobile Tweak */
     .wa-widget { bottom: 20px; right: 20px; }
-    .wa-chat-box { width: 280px; }
+    .wa-chat-box { width: calc(100vw - 40px); right: 0; }
     .wa-trigger span { display: none; }
-    .wa-trigger { padding: 15px; }
+    .wa-trigger { padding: 12px; }
 }
