@@ -1835,7 +1835,12 @@ body {
     
     .footer-grid { grid-template-columns: 1fr; text-align: center; gap: 40px; }
     .footer-brand { align-items: center; }
+    .footer-contact-wrapper { grid-template-columns: 1fr; gap: 30px; justify-items: center; text-align: center; }
+    .footer-contact-details { align-items: center; }
+    .footer-contact-item { justify-content: center; }
+    .footer-desc { margin-left: auto; margin-right: auto; }
     .social-links { justify-content: center; }
+    .footer-social-inline { justify-content: center; }
 }
 
 @media (max-width: 480px) {
