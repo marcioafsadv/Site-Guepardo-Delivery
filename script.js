@@ -13,3 +13,11 @@ document.addEventListener('DOMContentLoaded', () => {
         }
     });
 });
+
+// Google Ads Conversion Tracking
+function trackInscricao() {
+    if (typeof gtag === 'function') {
+        gtag('event', 'conversion', {'send_to': 'AW-18036476072/zjYOCOj886UEEKiRu5hD'});
+        console.log('Google Ads Conversion Tracked: Inscrição');
+    }
+}

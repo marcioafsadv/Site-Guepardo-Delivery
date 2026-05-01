@@ -190,6 +190,15 @@
             transform: scale(1.05);
         }
     </style>
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=AW-18036476072"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+
+      gtag('config', 'AW-18036476072');
+    </script>
     <!-- Meta Pixel Code -->
     <script>
     !function(f,b,e,v,n,t,s)
@@ -288,13 +297,13 @@
             <p class="impact-phrase">"Não perca mais tempo com logística amadora. Entre para a Savana."</p>
             <h2 style="margin-bottom: 40px; font-weight: 800;">Baixe Agora o Savana do Guepardo</h2>
             <div class="download-btns">
-                <a href="https://guepardodelivery-estabelecimento.com/" target="_blank" rel="noopener noreferrer" class="btn-download btn-android">
+                <a href="https://guepardodelivery-estabelecimento.com/" onclick="trackInscricao()" target="_blank" rel="noopener noreferrer" class="btn-download btn-android">
                     <span>🤖</span> Android Store
                 </a>
-                <a href="https://guepardodelivery-estabelecimento.com/" target="_blank" rel="noopener noreferrer" class="btn-download btn-ios">
+                <a href="https://guepardodelivery-estabelecimento.com/" onclick="trackInscricao()" target="_blank" rel="noopener noreferrer" class="btn-download btn-ios">
                     <span>🍎</span> iOS App Store
                 </a>
-                <a href="https://guepardodelivery-estabelecimento.com/" target="_blank" rel="noopener noreferrer" class="btn-download btn-web">
+                <a href="https://guepardodelivery-estabelecimento.com/" onclick="trackInscricao()" target="_blank" rel="noopener noreferrer" class="btn-download btn-web">
                     <span>💻</span> Versão Web (Desktop)
                 </a>
             </div>
@@ -304,5 +313,6 @@
     <footer style="padding: 60px 0; border-top: 1px solid rgba(255,255,255,0.05); text-align: center; color: rgba(255,255,255,0.4);">
         <p>&copy; 2026 Guepardo Delivery. Todos os direitos reservados. 🐆</p>
     </footer>
+    <script src="script.js"></script>
 </body>
 </html>
