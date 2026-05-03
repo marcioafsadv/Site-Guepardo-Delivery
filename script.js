@@ -38,22 +38,29 @@ document.addEventListener('click', (e) => {
     const target = e.target.closest('a, button');
     if (!target) return;
 
-    const text = (target.innerText || target.textContent || "").trim();
-    const href = target.getAttribute('href') || "";
+    const text = (target.textContent || "").trim().toLowerCase();
+    const href = (target.getAttribute('href') || "").toLowerCase();
     
-    // Check for "App Estabelecimento" or "App Entregador" patterns
-    const isAppEstabelecimento = text.includes('App Estabelecimento') || 
-                                 text.includes('Savana') ||
-                                 text.includes('Sou um Lojista') ||
+    // Check for "App Estabelecimento" or "App Entregador" patterns (Case Insensitive)
+    const isAppEstabelecimento = text.includes('estabelecimento') || 
+                                 text.includes('savana') ||
+                                 text.includes('lojista') ||
                                  href.includes('estabelecimento');
                                  
-    const isAppEntregador = text.includes('App Entregador') || 
-                             text.includes('Guepardo Entregador') || 
-                             text.includes('Sou um Entregador') ||
-                             text.includes('SEJA UM GUEPARDO') ||
+    const isAppEntregador = text.includes('entregador') || 
+                             text.includes('motorista') ||
+                             text.includes('motoboy') ||
+                             text.includes('guepardo') ||
                              href.includes('entregador');
 
+    // Only play if it's likely an app-related link
     if (isAppEstabelecimento || isAppEntregador) {
+        // Special case: ignore links to internal pages like about.html or suporte.html 
+        // unless they explicitly mention the apps in the text
+        if (href.endsWith('.html') && !text.includes('app') && !text.includes('savana')) {
+            return;
+        }
+        
         playRoar();
     }
 });
