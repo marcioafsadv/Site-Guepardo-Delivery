@@ -316,7 +316,7 @@ body {
     display: flex;
     flex-direction: column;
     padding: 0;
-    overflow: hidden;
+    /* overflow: hidden; Disabled to allow floating mascot badges to overflow */
     transition: var(--transition-smooth);
     position: relative;
 }
@@ -346,6 +346,8 @@ body {
     border-bottom: 1px solid var(--border-glass);
     position: relative;
     overflow: hidden;
+    border-top-left-radius: 23px;
+    border-top-right-radius: 23px;
 }
 
 /* Common Mockup Styles */
@@ -2158,111 +2160,74 @@ body {
     .wa-trigger { padding: 12px; }
 }
 
-/* --- Custom Mascot Integration (Hero & Showcase & Driver CTA) --- */
-.hero-content {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    gap: 60px;
-    text-align: left;
-}
-
-.hero-text {
-    flex: 1;
-}
-
-.hero-visual {
-    flex: 0 0 450px;
-    display: flex;
-    justify-content: center;
-    position: relative;
-}
-
-.hero-glow {
+/* --- Floating Mascot Badges for Showcase Cards --- */
+.mascot-badge {
     position: absolute;
-    width: 350px;
-    height: 350px;
-    background: radial-gradient(circle, rgba(255, 98, 0, 0.25) 0%, transparent 70%);
-    filter: blur(45px);
-    z-index: 0;
-}
-
-.hero-mascot {
-    width: 100%;
-    height: auto;
-    object-fit: contain;
-    border-radius: 32px;
-    border: 1px solid rgba(255, 98, 0, 0.25);
-    box-shadow: 0 20px 45px rgba(0, 0, 0, 0.6), 0 0 50px rgba(255, 98, 0, 0.25);
-    z-index: 1;
-}
-
-.hero-text .hero-subtitle {
-    margin: 0 0 40px 0;
-}
-
-.hero-text .hero-buttons {
-    justify-content: flex-start;
-}
-
-/* Showcase Mascot Styling */
-.showcase-mascot-img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    transition: var(--transition-smooth);
-}
-
-.showcase-card:hover .showcase-mascot-img {
-    transform: scale(1.05);
-}
-
-/* Driver CTA Mascot Styling */
-.d-pin-repro-image {
-    width: 220px;
-    height: 220px;
-    background: rgba(255, 98, 0, 0.05);
-    border: 1px solid rgba(255, 98, 0, 0.15);
-    border-radius: 40px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    backdrop-filter: blur(10px);
-    transform: rotate(-5deg);
+    width: 110px;
+    height: 110px;
+    border-radius: 24px;
     overflow: hidden;
-    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.4);
-    transition: var(--transition-smooth);
+    border: 2px solid var(--border-glass);
+    background: var(--bg-card);
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.5);
+    z-index: 100;
+    transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    pointer-events: none; /* Let clicks pass through to the card */
 }
 
-.d-pin-repro-image:hover {
-    transform: rotate(0deg) scale(1.05);
-    border-color: var(--primary-orange);
-    box-shadow: 0 15px 35px rgba(255, 98, 0, 0.25);
-}
-
-.driver-mascot {
+.mascot-badge img {
     width: 100%;
     height: 100%;
     object-fit: cover;
 }
 
-/* Responsiveness for Mascot Layouts */
-@media (max-width: 991px) {
-    .hero-content {
-        flex-direction: column;
-        text-align: center;
-        gap: 40px;
-    }
-    .hero-text .hero-subtitle {
-        margin: 0 auto 40px;
-    }
-    .hero-text .hero-buttons {
-        justify-content: center;
-    }
-    .hero-visual {
-        flex: none;
-        width: 100%;
-        max-width: 350px;
-    }
+/* Offset positions at the corner */
+.badge-central {
+    top: -25px;
+    right: -20px;
+    transform: rotate(12deg);
 }
 
+.badge-savana {
+    top: -25px;
+    right: -20px;
+    transform: rotate(-8deg);
+}
+
+.badge-entregador {
+    top: -25px;
+    right: -20px;
+    transform: rotate(15deg);
+}
+
+/* Hover effects when card is hovered */
+.showcase-card:hover .badge-central {
+    transform: rotate(0deg) scale(1.15);
+    border-color: var(--primary-orange);
+    box-shadow: 0 0 25px rgba(255, 98, 0, 0.5);
+}
+
+.showcase-card:hover .badge-savana {
+    transform: rotate(0deg) scale(1.15);
+    border-color: #FF0055;
+    box-shadow: 0 0 25px rgba(255, 0, 85, 0.5);
+}
+
+.showcase-card:hover .badge-entregador {
+    transform: rotate(0deg) scale(1.15);
+    border-color: var(--accent-ciano);
+    box-shadow: 0 0 25px rgba(0, 240, 255, 0.5);
+}
+
+@media (max-width: 768px) {
+    /* Slightly smaller badges on tablet/mobile to prevent overlap issue */
+    .mascot-badge {
+        width: 80px;
+        height: 80px;
+        border-radius: 16px;
+    }
+    .badge-central, .badge-savana, .badge-entregador {
+        top: -15px;
+        right: -10px;
+    }
+}
