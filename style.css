@@ -1521,6 +1521,18 @@ body {
     filter: drop-shadow(0 0 20px rgba(255,98,0,0.4));
 }
 
+.d-img-xl {
+    width: 140px;
+    height: 140px;
+    object-fit: contain;
+    filter: drop-shadow(0 10px 20px rgba(0, 0, 0, 0.4)) drop-shadow(0 0 15px rgba(255, 98, 0, 0.3));
+    transition: transform 0.3s cubic-bezier(0.34, 1.56, 0.64, 1);
+}
+
+.d-pin-repro:hover .d-img-xl {
+    transform: scale(1.1) rotate(5deg);
+}
+
 @media (max-width: 1024px) {
     .driver-cta-container { flex-direction: column; text-align: center; padding: 60px 30px; }
     .driver-cta-visual { flex: none; margin-top: 40px; }
