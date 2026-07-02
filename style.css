@@ -2157,3 +2157,112 @@ body {
     .wa-trigger span { display: none; }
     .wa-trigger { padding: 12px; }
 }
+
+/* --- Custom Mascot Integration (Hero & Showcase & Driver CTA) --- */
+.hero-content {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 60px;
+    text-align: left;
+}
+
+.hero-text {
+    flex: 1;
+}
+
+.hero-visual {
+    flex: 0 0 450px;
+    display: flex;
+    justify-content: center;
+    position: relative;
+}
+
+.hero-glow {
+    position: absolute;
+    width: 350px;
+    height: 350px;
+    background: radial-gradient(circle, rgba(255, 98, 0, 0.25) 0%, transparent 70%);
+    filter: blur(45px);
+    z-index: 0;
+}
+
+.hero-mascot {
+    width: 100%;
+    height: auto;
+    object-fit: contain;
+    border-radius: 32px;
+    border: 1px solid rgba(255, 98, 0, 0.25);
+    box-shadow: 0 20px 45px rgba(0, 0, 0, 0.6), 0 0 50px rgba(255, 98, 0, 0.25);
+    z-index: 1;
+}
+
+.hero-text .hero-subtitle {
+    margin: 0 0 40px 0;
+}
+
+.hero-text .hero-buttons {
+    justify-content: flex-start;
+}
+
+/* Showcase Mascot Styling */
+.showcase-mascot-img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: var(--transition-smooth);
+}
+
+.showcase-card:hover .showcase-mascot-img {
+    transform: scale(1.05);
+}
+
+/* Driver CTA Mascot Styling */
+.d-pin-repro-image {
+    width: 220px;
+    height: 220px;
+    background: rgba(255, 98, 0, 0.05);
+    border: 1px solid rgba(255, 98, 0, 0.15);
+    border-radius: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    backdrop-filter: blur(10px);
+    transform: rotate(-5deg);
+    overflow: hidden;
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.4);
+    transition: var(--transition-smooth);
+}
+
+.d-pin-repro-image:hover {
+    transform: rotate(0deg) scale(1.05);
+    border-color: var(--primary-orange);
+    box-shadow: 0 15px 35px rgba(255, 98, 0, 0.25);
+}
+
+.driver-mascot {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+/* Responsiveness for Mascot Layouts */
+@media (max-width: 991px) {
+    .hero-content {
+        flex-direction: column;
+        text-align: center;
+        gap: 40px;
+    }
+    .hero-text .hero-subtitle {
+        margin: 0 auto 40px;
+    }
+    .hero-text .hero-buttons {
+        justify-content: center;
+    }
+    .hero-visual {
+        flex: none;
+        width: 100%;
+        max-width: 350px;
+    }
+}
+
