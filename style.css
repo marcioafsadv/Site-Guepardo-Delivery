@@ -2161,9 +2161,9 @@ body {
 /* --- Showcase Grid Cheetah Mascot on the Left --- */
 .grid-mascot-container {
     position: absolute;
-    left: -140px; /* Positioned slightly overlapping the 1200px container on the left */
+    left: -160px; /* Positioned slightly overlapping the 1200px container on the left */
     top: 40px;
-    width: 190px;
+    width: 220px;
     height: auto;
     z-index: 50;
     pointer-events: none;
@@ -2173,7 +2173,7 @@ body {
     width: 100%;
     height: auto;
     object-fit: contain;
-    filter: drop-shadow(0 15px 30px rgba(0, 0, 0, 0.8)) drop-shadow(0 0 35px rgba(255, 98, 0, 0.45));
+    filter: drop-shadow(0 15px 25px rgba(0, 0, 0, 0.4)) drop-shadow(0 0 20px rgba(255, 98, 0, 0.25));
 }
 
 @media (max-width: 1300px) {
