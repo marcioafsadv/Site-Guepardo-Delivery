@@ -2188,6 +2188,18 @@ body {
     filter: drop-shadow(0 20px 30px rgba(0, 0, 0, 0.4)) drop-shadow(0 0 25px rgba(255, 98, 0, 0.2));
 }
 
+.showcase-card-mascot {
+    position: absolute;
+    right: -10px;
+    bottom: -15px;
+    height: 180px;
+    width: auto;
+    z-index: 10;
+    pointer-events: none;
+    filter: drop-shadow(0 10px 15px rgba(0,0,0,0.5)) drop-shadow(0 0 12px rgba(0, 240, 255, 0.25));
+    transition: var(--transition-smooth);
+}
+
 @media (max-width: 1600px) {
     /* Scale down mascot size on medium desktop monitors */
     .grid-mascot-container {
